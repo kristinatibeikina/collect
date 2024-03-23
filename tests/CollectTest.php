@@ -16,7 +16,7 @@ class CollectTest extends TestCase
     // Тест на ассоциативный массив
     public function testKey()
     {
-        $collect = new Collect\Collect(['a' => 'apple', 'b' => 'banana', 'c' => 'cherry']);
+        $collect = new Collect\Collect(['a' => 'aaa', 'b' => 'bbb', 'c' => 'ccc']);
         $result = $collect->keys();
         $this->assertEquals(['a', 'b', 'c'], $result->toArray());
     }
@@ -32,7 +32,7 @@ class CollectTest extends TestCase
     // Тест на числовые ключи
     public function testKeyNumbers()
     {
-        $collect = new Collect\Collect(['1' => 'apple', '2' => 'banana', '3' => 'cherry']);
+        $collect = new Collect\Collect(['1' => 'aaa', '2' => 'bbb', '3' => 'ccc']);
         $result = $collect->keys();
         $this->assertEquals(['1', '2', '3'], $result->toArray());
     }
@@ -43,9 +43,9 @@ class CollectTest extends TestCase
     // Тест на ассоциативный массив
     public function testValues()
     {
-        $collect = new Collect\Collect(['a' => 'apple', 'b' => 'banana', 'c' => 'cherry']);
+        $collect = new Collect\Collect(['a' => 'aaa', 'b' => 'bbb', 'c' => 'ccc']);
         $result = $collect->values();
-        $this->assertEquals(['apple', 'banana', 'cherry'], $result->toArray());
+        $this->assertEquals(['aaa', 'bbb', 'ccc'], $result->toArray());
     }
 
     // Тест на пустой массив
@@ -67,9 +67,9 @@ class CollectTest extends TestCase
 
     public function testGet()
     {
-        $collect = new Collect\Collect(['a' => 'apple', 'b' => 'banana', 'c' => 'cherry']);
+        $collect = new Collect\Collect(['a' => 'aaa', 'b' => 'bbb', 'c' => 'ccc']);
         $result = $collect->get('a');
-        $this->assertEquals('apple',$result);
+        $this->assertEquals('aaa',$result);
     }
 
     // Тест на тип возвращаемого значения
