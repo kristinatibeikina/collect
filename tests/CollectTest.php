@@ -91,16 +91,8 @@ class CollectTest extends TestCase
     //Вариант 2
     //
 
-    //Тест на создания коллекции с данными
-    public function testOnly()
-    {
-        $collect = new Collect\Collect(['a' => 1, 'b' => 2, 'c' => 3]);
-        $result = $collect->only('a', 'c');
-        $this->assertEquals(['a' => 1, 'c' => 3], $result->toArray());
-    }
-
     //Тест на выбор определенных элементов
-    public function testOnlyWithArray()
+    public function testOnly()
     {
         $collect = new Collect\Collect(['a' => 1, 'b' => 2, 'c' => 3]);
         $result = $collect->only(['a', 'c']);
